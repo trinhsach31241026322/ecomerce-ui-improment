@@ -1,0 +1,165 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.header {
+    padding: 24px 16px;
+    text-align: center;
+    background: #ee4d2d;
+    color: white;
+}
+
+.header h1 {
+    margin: 0 0 8px;
+}
+
+.header p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: calc(100% - 32px);
+    margin: 28px auto;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 12px;
+}
+
+.product-info h3 {
+    min-height: 40px;
+    margin: 0 0 10px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.sale-price {
+    margin: 0 0 8px;
+    color: #d7322d;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.old-price {
+    color: #888;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.discount {
+    padding: 4px 6px;
+    background: #fff0ed;
+    color: #d7322d;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.product-card button {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #ee4d2d;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #d94325;
+}
+
+footer {
+    padding: 20px;
+    color: #666;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Máy tính bảng */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+/* Điện thoại */
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 20px);
+        margin: 20px auto;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-info {
+        padding: 9px;
+    }
+
+    .product-info h3 {
+        font-size: 13px;
+    }
+
+    .sale-price {
+        font-size: 19px;
+    }
+
+    .old-price {
+        font-size: 11px;
+    }
+
+    .discount {
+        font-size: 11px;
+    }
+
+    .product-card button {
+        font-size: 12px;
+    }
+}

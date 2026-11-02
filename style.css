@@ -35,11 +35,15 @@ body {
     margin-bottom: 20px;
 }
 
+
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
+
+
+
 
 .product-card {
     min-width: 0;
@@ -78,6 +82,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
     margin-bottom: 14px;
 }
@@ -110,6 +115,17 @@ body {
 
 .product-card button:hover {
     background: #d94325;
+}
+
+/* Tạo chuyển đổi màu mượt cho nút */
+.product-card button {
+    transition: background-color 0.2s ease;
+}
+
+/* Hiển thị viền khi điều hướng bằng bàn phím */
+.product-card button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
 }
 
 footer {
@@ -162,4 +178,64 @@ footer {
     .product-card button {
         font-size: 12px;
     }
+}
+
+/* Bước 4: Thực hành CSS Selector và Box Model */
+
+/* Element selector: chọn tất cả thẻ h3 */
+h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* Class selector: chọn các thẻ có class product-card */
+.product-card {
+    margin: 12px;
+    padding: 16px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Descendant selector: chọn thẻ h3 bên trong product-info */
+.product-info h3 {
+    margin-bottom: 8px;
+}
+
+/* Class selector: định dạng giá sản phẩm */
+.sale-price {
+    color: #d62828;
+    font-weight: bold;
+}
+
+/* Descendant selector: chọn nút bên trong product-card */
+.product-card button {
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+/* Định dạng menu điều hướng */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 12px 16px;
+    list-style: none;
+    background-color: #ffffff;
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ee4d2d;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #ee4d2d;
+    outline-offset: 4px;
 }

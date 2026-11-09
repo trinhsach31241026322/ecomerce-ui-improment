@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-    <body>
-    <nav>
+    <body id="trang-chu">
+    <nav aria-label="Điều hướng chính">
     <ul>
-        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#trang-chu">Trang chủ</a></li>
         <li><a href="#san-pham">Sản phẩm</a></li>
         <li><a href="#footer">Liên hệ</a></li>
     </ul>
@@ -19,15 +19,27 @@
 
     <header class="header">
         <h1>Góc Mua Sắm</h1>
-        <p>Sản phẩm nổi bật dành cho bạn</p>
+        <p>Chọn món yêu thích. Mua sắm thật tiết kiệm.</p>
     </header>
 
     <main class="container">
-        <h2>Sản phẩm khuyến mãi</h2>
+        <section class="promo" aria-labelledby="promo-title">
+            <div>
+                <p class="eyebrow">ƯU ĐÃI NỔI BẬT</p>
+                <h2 id="promo-title">Món đồ bạn thích,<br>mức giá bạn yêu.</h2>
+                <p>Khám phá những sản phẩm được chọn cho góc mua sắm của bạn.</p>
+                <a class="promo-link" href="#san-pham">Khám phá ưu đãi ↗</a>
+            </div>
+            <div class="promo-stamp"><span>Giảm đến</span><strong>24%</strong><span>trên sản phẩm nổi bật</span></div>
+        </section>
+        <div class="section-heading" id="san-pham">
+            <div><p class="eyebrow">GỢI Ý DÀNH CHO BẠN</p><h2>Sản phẩm khuyến mãi</h2></div>
+            <span class="product-count">4 sản phẩm</span>
+        </div>
 
         <section class="product-grid">
             <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Tai nghe chụp tai màu đen">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80" alt="Tai nghe chụp tai màu vàng">
                 <div class="product-info">
                     <h3>Tai nghe chụp tai</h3>
                     <p class="sale-price">189.000đ</p>
@@ -35,7 +47,7 @@
                         <span class="old-price">249.000đ</span>
                         <span class="discount">-24%</span>
                     </div>
-                    <button type="button">Xem sản phẩm</button>
+                    <details><summary>Xem sản phẩm</summary><p>Sản phẩm và giá bán được dùng để minh họa bố cục thẻ sản phẩm trong bài tập HTML5/CSS3.</p></details>
                 </div>
             </article>
 
@@ -48,7 +60,7 @@
                         <span class="old-price">329.000đ</span>
                         <span class="discount">-21%</span>
                     </div>
-                    <button type="button">Xem sản phẩm</button>
+                    <details><summary>Xem sản phẩm</summary><p>Sản phẩm và giá bán được dùng để minh họa bố cục thẻ sản phẩm trong bài tập HTML5/CSS3.</p></details>
                 </div>
             </article>
 
@@ -61,12 +73,12 @@
                         <span class="old-price">499.000đ</span>
                         <span class="discount">-20%</span>
                     </div>
-                    <button type="button">Xem sản phẩm</button>
+                    <details><summary>Xem sản phẩm</summary><p>Sản phẩm và giá bán được dùng để minh họa bố cục thẻ sản phẩm trong bài tập HTML5/CSS3.</p></details>
                 </div>
             </article>
 
             <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=80" alt="Máy ảnh mini màu trắng">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=80" alt="Máy ảnh kiểu cổ điển">
                 <div class="product-info">
                     <h3>Máy ảnh mini</h3>
                     <p class="sale-price">799.000đ</p>
@@ -74,13 +86,13 @@
                         <span class="old-price">999.000đ</span>
                         <span class="discount">-20%</span>
                     </div>
-                    <button type="button">Xem sản phẩm</button>
+                    <details><summary>Xem sản phẩm</summary><p>Sản phẩm và giá bán được dùng để minh họa bố cục thẻ sản phẩm trong bài tập HTML5/CSS3.</p></details>
                 </div>
             </article>
         </section>
     </main>
 
-    <footer>
+    <footer id="footer"><strong>Góc Mua Sắm</strong><p>Sinh viên: Sạch Thị Phương Trinh · Phát triển ứng dụng TMĐT</p>
         Giao diện minh họa phục vụ bài tập HTML5 và CSS3.
     </footer>
 </body>

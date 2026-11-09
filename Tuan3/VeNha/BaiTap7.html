@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Bài tập 7 - Bố cục trang Web</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #222;
+            padding: 50px;
+            background-color: #ffffff;
+        }
+
+        /* Khung bao ngoài cùng (#wrapper) */
+        #wrapper {
+            width: 340px;
+            margin: 0 auto;
+            border: 2px solid #000000;
+            padding: 8px;
+            position: relative;
+            background-color: #ffffff;
+            /* Tạo phần chữ nav và main nằm ngang hàng nhau bằng Flexbox */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* Đổ bóng phía bên trái và bên dưới giống hình mẫu */
+            box-shadow: -12px 12px 15px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Chữ "wrapper" nằm phía trên góc trái của khung viền ngoài */
+        #wrapper::before {
+            content: "wrapper";
+            position: absolute;
+            top: -28px;
+            left: 6px;
+        }
+
+        /* Khối header chiếm 100% chiều ngang ở trên */
+        header {
+            width: 100%;
+            height: 55px;
+            border: 2px solid #000000;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        header::before {
+            content: "header";
+        }
+
+        /* Khối nav nằm bên trái (chiếm khoảng 24% chiều ngang) */
+        nav {
+            width: 24%;
+            height: 220px;
+            border: 2px solid #000000;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        nav::before {
+            content: "nav";
+        }
+
+        /* Khối main nằm bên phải cạnh nav (chiếm 73% chiều ngang) */
+        main {
+            width: 73%;
+            height: 220px;
+            border: 2px solid #000000;
+            padding: 8px;
+            margin-bottom: 8px;
+        }
+        main::before {
+            content: "main";
+        }
+
+        /* Khối footer chiếm 100% chiều ngang ở dưới cùng */
+        footer {
+            width: 100%;
+            height: 40px;
+            border: 2px solid #000000;
+            padding: 6px 8px;
+        }
+        footer::before {
+            content: "footer";
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header> </header>
+        <nav> </nav>
+        <main> </main>
+        <footer> </footer>
+    </div>
+</body>
+</html>

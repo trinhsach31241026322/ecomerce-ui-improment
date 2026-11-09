@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heroes of JavaScript and HTML</title>
+    <!-- Nhúng Font Awesome để hiển thị các thẻ <i> có sẵn trong bài -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* i. Khung chứa lớn (#root): kích thước: 960px; margin; font-size; background; padding */
+        #root {
+            width: 960px;
+            margin: 0 auto;
+            font-size: 16px;
+            background-color: #cccccc;
+            padding: 20px 25px 40px 25px;
+        }
+
+        /* ii. Header (.header): font-size; canh lề */
+        .header {
+            font-size: 28px;
+            text-align: center;
+            margin: 5px 0 20px 0;
+            color: #000000;
+        }
+
+        /* iii. Description (.description ở đầu trang): margin; background; padding; border */
+        #root > .description {
+            margin: 0 auto 30px auto;
+            background-color: #8c8c8c;
+            padding: 20px 35px;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+        /* Dòng chữ Currently the game has only four hero types: */
+        .remark {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        /* Danh sách chứa 4 cột Hero */
+        .heroes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* iv. Hero-item: width; display */
+        .hero-item {
+            width: 23.5%;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+        }
+
+        /* v. H2 trong Hero-item: font-size; canh lề */
+        .hero-item h2 {
+            font-size: 18px;
+            text-align: center;
+            margin: 0 0 12px 0;
+        }
+
+        /* vi. Description trong Hero-item: position; margin; font-size; background; height; canh lề; padding; border; z-index */
+        .hero-item .description {
+            position: relative;
+            margin: 0;
+            font-size: 14px;
+            background-color: rgba(140, 140, 140, 0.85);
+            height: 145px;
+            text-align: center;
+            padding: 12px 10px;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            z-index: 2;
+            color: #000000;
+        }
+
+        /* vii. Hình trong Hero-item: position; cao; rộng; border */
+        .hero-item img {
+            position: relative;
+            width: 82%;
+            height: 160px;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            border-radius: 8px;
+            display: block;
+            margin: -30px auto 0 auto; /* Đẩy hình lên trên để xếp chồng dưới khung description như hình mẫu */
+            z-index: 1;
+            background-color: #ffffff;
+        }
+    </style>
+    <script>
+        // Tự động dò tìm thư mục css1/imgs nếu file HTML đang nằm ở thư mục khác (như Tuan3/VeNha/)
+        function fixImgPath(img) {
+            const fileName = img.getAttribute('data-file');
+            const paths = [
+                'css1/imgs/' + fileName,
+                '../css1/imgs/' + fileName,
+                '../../css1/imgs/' + fileName,
+                '../imgs/' + fileName,
+                '../../imgs/' + fileName
+            ];
+            let step = parseInt(img.getAttribute('data-step') || '0');
+            if (step < paths.length) {
+                img.setAttribute('data-step', step + 1);
+                img.src = paths[step];
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="root">
+        <h1 class="header">
+            <i class="fas fa-address-card"></i>
+            Heroes of JavaScript and HTML
+        </h1>
+
+        <p class="description">
+            <i class="fab fa-android"></i>
+            <strong>Heroes of JavaScript and HTML</strong> is a "Heroes of Might and Magic"-like game, but for code nerds.
+            Each hero has its unique coding abilities and based on them he can develop software applications.
+        </p>
+        <div class="container">
+            <p class="remark">Currently the game has only four hero types:</p>
+            <ul class="heroes-list">
+                <li class="hero-item">
+                    <h2>Front-end Developer</h2>
+                    <p class="description">
+                        Being the ultra masters of JavaScript, the order of the <strong>Front-enders</strong> is known to
+                        create user interfaces, that fill the users with absolute pleasure
+                    </p>
+                    <img class="animated infinite bounce delay-2s" src="imgs/fe.png" data-file="fe.png" onerror="fixImgPath(this)" alt="Front-end Developer">
+                </li>
+                <li class="hero-item">
+                    <h2>Mobile Developer</h2>
+                    <p class="description">
+                        The movement of the <strong>Mobile developers</strong> is brand new, yet in their short time they
+                        already manage to amaze the peoples of the worlds and beyond with create applications.
+                    </p>
+                    <img src="imgs/mobile.jpg" data-file="mobile.jpg" onerror="fixImgPath(this)" alt="Mobile Developer">
+                </li>
+                <li class="hero-item">
+                    <h2>Web Developer</h2>
+                    <p class="description">
+                        The sect of the <strong>Web developers</strong> is the oldest there is. They prefer the old ways and rarely move to modern stuff. The Old Religion gives them power of small gods. 
+                    </p>
+                    <img src="imgs/web.jpg" data-file="web.jpg" onerror="fixImgPath(this)" alt="Web Developer">
+                </li>
+                <li class="hero-item">
+                    <h2>QA Engineer</h2>
+                    <p class="description">
+                        The <strong>QAs</strong> are the desiders of fates! They always have the final word, and all gods and mortals are bound to obey them.
+                    </p>
+                    <img src="imgs/qa.jpg" data-file="qa.jpg" onerror="fixImgPath(this)" alt="QA Engineer">
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

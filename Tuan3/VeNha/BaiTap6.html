@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Học web chuẩn</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f8f8;
+            padding: 40px 15px;
+        }
+
+        /* Khung chứa chính */
+        .portfolio {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Tiêu đề MY PORTFOLIO và gạch chân xanh */
+        .portfolio h2 {
+            font-size: 26px;
+            color: #333333;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .portfolio h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background-color: #55b9b0;
+        }
+
+        /* Danh sách tab lọc nằm trên 1 hàng ngang */
+        .portfolio .list-tab {
+            list-style: none;
+            margin-bottom: 35px;
+            white-space: nowrap;
+        }
+
+        .portfolio .list-tab li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .portfolio .list-tab li a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .portfolio .list-tab li:first-child a,
+        .portfolio .list-tab li a:hover {
+            color: #55b9b0;
+        }
+
+        /* Lưới hiển thị đúng 3 cục trên 1 hàng */
+        .portfolio .galerry {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .portfolio .galerry li {
+            width: 31.5%;
+        }
+
+        /* Ẩn các thẻ li từ thứ 4 trở đi để chỉ hiện đúng 3 cục như hình mẫu */
+        .portfolio .galerry li:nth-child(n+4) {
+            display: none;
+        }
+
+        /* Khung màu xanh lá #9cd17c và chữ "Học Web Chuẩn" */
+        .portfolio .galerry li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #9cd17c;
+            aspect-ratio: 350 / 260;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio .galerry li a::before {
+            content: "Học Web Chuẩn";
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 22px;
+            font-family: Georgia, "Times New Roman", serif;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .portfolio .galerry li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio">
+        <h2>MY PORTFOLIO</h2>
+        <ul class="list-tab">
+            <li><a href="./">All</a></li>
+            <li><a href="./">Web App</a></li>
+            <li><a href="./">UI/UX</a></li>
+            <li><a href="./">Graphics Design</a></li>
+            <li><a href="./">Mobile App</a></li>
+            <li><a href="./">Branding</a></li>
+            <li><a href="./">Marketing</a></li>
+        </ul>
+        <ul class="galerry">
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+            <li><a href="./"><img src="https://hocwebchuan.com/exercises/images/img_350x260.png" alt="" onerror="this.style.display='none'"></a></li>
+        </ul>
+    </section>
+</body>
+</html>

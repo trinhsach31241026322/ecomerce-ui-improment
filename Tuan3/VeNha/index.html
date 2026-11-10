@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sạch Thị Phương Trinh | Bài tập tuần 3</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 48px 20px; background: #eef4e9; color: #243a2b; font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+        main { max-width: 900px; margin: auto; }
+        .profile, .exercises { background: #fffef9; border: 1px solid #d6e1cf; border-radius: 20px; padding: 32px; }
+        .profile { display: flex; align-items: center; gap: 32px; }
+        figure { margin: 0; flex: 0 0 220px; }
+        .photo { width: 100%; aspect-ratio: 1.5; border-radius: 12px; background: #dcebcf; display: grid; place-items: center; overflow: hidden; }
+        .photo img { width: 100%; height: 100%; object-fit: cover; }
+        figcaption { font-size: 12px; color: #576b55; margin-top: 8px; }
+        .eyebrow { margin: 0; font-size: 13px; letter-spacing: 2px; font-weight: bold; color: #627b48; }
+        h1 { font-size: clamp(26px, 4vw, 36px); line-height: 1.2; margin: 12px 0; }
+        .intro { margin: 0 0 18px; color: #576b55; }
+        a { color: #315d33; text-underline-offset: 4px; }
+        .social { display: inline-block; padding: 9px 18px; border: 1px solid #315d33; border-radius: 8px; text-decoration: none; }
+        .exercises { margin-top: 24px; }
+        h2 { margin: 0 0 6px; font-size: 24px; }
+        .note { margin: 0 0 22px; color: #576b55; }
+        ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+        .exercise { display: block; padding: 16px 18px; border: 1px solid #d6e1cf; border-radius: 10px; text-decoration: none; }
+        .exercise strong, .exercise span { display: block; }
+        .exercise span { font-size: 14px; color: #576b55; }
+        a:hover { background: #eef4e9; }
+        a:focus-visible { outline: 3px solid #6e8b43; outline-offset: 4px; }
+        footer { text-align: center; color: #576b55; font-size: 13px; margin-top: 24px; }
+        @media (max-width: 600px) {
+            body { padding: 24px 16px; }
+            .profile { flex-direction: column; align-items: stretch; gap: 20px; }
+            .profile, .exercises { padding: 24px; }
+            figure { flex-basis: auto; }
+            ul { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="profile">
+            <figure>
+                <div class="photo">
+                    <img src="images.jpg" alt="Totoro và hai bạn nhỏ trên đồng cỏ xanh">
+                </div>
+            </figure>
+            <div>
+                <p class="eyebrow">BÀI TẬP THỰC HÀNH · TUẦN 3</p>
+                <h1>Sạch Thị Phương Trinh</h1>
+                <p class="intro">Chào mừng bạn đến với trang tổng hợp bài tập HTML và CSS của mình.</p>
+                <a class="social" href="https://www.facebook.com/ptrinhh06?locale=vi_VN" target="_blank" rel="noopener noreferrer">Facebook của Trinh ↗</a>
+            </div>
+        </header>
+
+        <section class="exercises" aria-labelledby="exercise-title">
+            <h2 id="exercise-title">Danh sách bài tập</h2>
+            <p class="note">Chọn một bài để xem nội dung đã thực hiện.</p>
+            <ul>
+                <li><a class="exercise" href="BaiTap2.html"><strong>Bài tập 2</strong><span>UEH</span></a></li>
+                <li><a class="exercise" href="BaiTap4.html"><strong>Bài tập 4</strong><span>Menu ngang</span></a></li>
+                <li><a class="exercise" href="BaiTap5.html"><strong>Bài tập 5</strong><span>Best Shared Hosting Company</span></a></li>
+                <li><a class="exercise" href="BaiTap6.html"><strong>Bài tập 6</strong><span>My Portfolio</span></a></li>
+                <li><a class="exercise" href="BaiTap7.html"><strong>Bài tập 7</strong><span>Bố cục trang web</span></a></li>
+                <li><a class="exercise" href="BaiTap8.html"><strong>Bài tập 8 và 9</strong><span>Heroes of JavaScript and HTML</span></a></li>
+            </ul>
+        </section>
+        <footer>Tuần 3 · Bài tập về nhà · Sạch Thị Phương Trinh</footer>
+    </main>
+</body>
+</html>

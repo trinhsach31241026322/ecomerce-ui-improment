@@ -1,3 +1,7 @@
-# Lab 10 – JavaScript 3: jQuery
+# Fundamentals of Web Development, 2nd Edition
+### Chapter 10 [JavaScript 3: jQuery], Lab
 
-Chưa có mã nguồn Lab 10 trong workspace hiện tại. Bổ sung từng bài thực hành vào thư mục này khi có tài liệu và tệp nguồn.
+What You Will Learn
+* Extending JavaScript using jQuery
+* Manipulating the DOM and handling events using jQuery
+* Making asynchronous requests in JavaScript using jQuery
